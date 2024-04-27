@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+input, button {
+    font-family: inherit;
+    border: none;
+    outline: none;
+}
+
+body {
+    font-family: 'Roboto';
+}
+
+button {
+    background-color: rgb(47, 128, 237);
+    color: white;
+    box-shadow: 2px 0 4px rgba(47, 128, 237, 1);
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        box-shadow: none;
+    }
+}

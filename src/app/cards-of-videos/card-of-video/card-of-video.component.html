@@ -1,1 +1,25 @@
-<p>card-of-video works!</p>
+<div class="container-video" [style.borderBottom]="getBorderBottom(video.publishedAt)">
+    <div class="info">
+        <img src="{{video.thumbnail}}" alt="">
+        <div class="statistics">
+            <div>
+                <img src="assets/img/viewed.svg" alt="">
+                <div>{{video.statistics.viewCount}}</div>
+            </div>
+            <div>
+                <img src="assets/img/liked.svg" alt="">
+                <div>{{video.statistics.likeCount}}</div>
+            </div>
+            <div>
+                <img src="assets/img/dislike.svg" alt="">
+                <div>{{video.statistics.dislikeCount}}</div>
+            </div>
+            <div>
+                <img src="assets/img/comment.svg" alt="">
+                <div>{{video.statistics.commentCount}}</div>
+            </div>
+        </div>
+        <div class="title">{{video.titel | truncate: 40}}</div>
+    </div>
+    <button class="more">more...</button>
+</div>

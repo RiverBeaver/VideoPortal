@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "VideoPortal:build:production"
+              "buildTarget": "VideoPortal:build:production"
             },
             "development": {
-              "browserTarget": "VideoPortal:build:development"
+              "buildTarget": "VideoPortal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "VideoPortal:build"
+            "buildTarget": "VideoPortal:build"
           }
         },
         "test": {

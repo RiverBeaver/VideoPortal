@@ -1,0 +1,16 @@
+<header>
+    <div class="container-header">
+        <div class="logo-and-form">
+            <img src="assets/img/logo.png" alt="">
+            <div class="form-and-settings-button">
+                <form #videoSearch="ngForm" novalidate>
+                    <input name="searchString" type="text" placeholder="What are you want to find out?" ngModel>
+                    <button [disabled]="videoSearch.invalid" (click)="submit(videoSearch)">search</button>
+                </form>
+                <button (click)="openOrCloseSettings()"><img src="assets/img/Settings.svg" alt=""></button>
+            </div>
+        </div>
+        <settings *ngIf="showSettings"></settings>
+    </div>
+</header>
+

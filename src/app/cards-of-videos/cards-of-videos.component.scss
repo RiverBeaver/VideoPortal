@@ -1,0 +1,11 @@
+div.container-videos {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+
+    div.videos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.75rem;
+    }
+}

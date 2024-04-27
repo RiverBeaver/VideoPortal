@@ -1,0 +1,28 @@
+div.container-settings {
+    display: flex;
+    gap: 0.625rem;
+    align-items: center;
+    font-size: 0.75rem;
+
+    div.title {
+        color: rgb(146, 146, 146);
+    }
+
+    div.sorts {
+        display: flex;
+        gap: 1.25rem;
+
+        input {
+            display: none;
+        }
+        input:checked + label{
+            text-decoration: underline;
+        }
+
+        label {
+            color: rgba(47, 128, 237, 1);
+            cursor: pointer;
+        }
+    }
+
+}
