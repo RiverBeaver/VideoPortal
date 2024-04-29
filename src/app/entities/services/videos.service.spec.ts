@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { VideosService } from './videos.service';
+import VideosService from './videos.service';
 
 describe('VideosService', () => {
   let service: VideosService;

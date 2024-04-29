@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CardOfVideoComponent } from './card-of-video.component';
+import CardOfVideoComponent from './card-of-video.component';
 
 describe('CardOfVideoComponent', () => {
   let component: CardOfVideoComponent;
@@ -8,7 +8,7 @@ describe('CardOfVideoComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [CardOfVideoComponent]
+      declarations: [CardOfVideoComponent],
     });
     fixture = TestBed.createComponent(CardOfVideoComponent);
     component = fixture.componentInstance;

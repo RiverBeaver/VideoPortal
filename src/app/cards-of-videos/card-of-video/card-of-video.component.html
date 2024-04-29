@@ -21,5 +21,5 @@
         </div>
         <div class="title">{{video.titel | truncate: 40}}</div>
     </div>
-    <button class="more">more...</button>
+    <button class="more" (click)="moreDetailed(video.id)">more...</button>
 </div>

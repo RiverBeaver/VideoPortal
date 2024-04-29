@@ -1,7 +1,9 @@
 <header>
     <div class="container-header">
         <div class="logo-and-form">
-            <img src="assets/img/logo.png" alt="">
+            <button class="logo" (click)="goToMainPage()">
+                <img src="assets/img/logo.png" alt="">
+            </button>
             <div class="form-and-settings-button">
                 <form #videoSearch="ngForm" novalidate>
                     <input name="searchString" type="text" placeholder="What are you want to find out?" ngModel>
@@ -10,7 +12,7 @@
                 <button (click)="openOrCloseSettings()"><img src="assets/img/Settings.svg" alt=""></button>
             </div>
         </div>
-        <settings *ngIf="showSettings"></settings>
+        <app-settings *ngIf="showSettings"></app-settings>
     </div>
 </header>
 

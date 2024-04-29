@@ -41,5 +41,9 @@
     button.more {
         padding: 0.5rem 2.25rem 0.5rem 2.625rem;
         font-size: 0.75rem;
+
+        &:hover {
+            background-color: #5da2ff;
+        }
     }
 }

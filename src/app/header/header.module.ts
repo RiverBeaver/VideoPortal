@@ -1,20 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './header.component';
 import { FormsModule } from '@angular/forms';
-import { SettingsComponent } from './settings/settings.component';
-
-
+import HeaderComponent from './header.component';
+import SettingsComponent from './settings/settings.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent, 
-    SettingsComponent
+    HeaderComponent,
+    SettingsComponent,
   ],
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent],
 })
-export class HeaderModule { }
+export default class HeaderModule { }

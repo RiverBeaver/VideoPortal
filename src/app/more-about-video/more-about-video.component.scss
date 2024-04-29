@@ -1,0 +1,171 @@
+@use 'sass:color';
+main {
+    margin: 5vw;
+    display: flex;
+    justify-content: center;
+
+    div.container-video {
+        max-width: 75rem;
+        display: flex;
+        justify-content: center;
+        height: min(calc(75rem*0.6/(300/168.75)), calc(90vw*0.6/(300/168.75)));
+        box-sizing: border-box;
+        position: relative;
+
+        button.go-back {
+            position: absolute;
+            box-shadow: none;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            top: 0;
+            left: -32px;
+            padding: 0.5rem 0.625rem;
+
+            img {
+                height: 16px;
+                width: 12px;
+                vertical-align: top;
+            }
+        }
+
+        img.thumbnail {
+            width: 60%;
+        }
+
+        div.info-and-statistics {
+            width: 40%;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            gap: 1.5rem;
+            // align-content: space-between;
+            // box-sizing: border-box;
+            padding: 2.25rem 2.25rem 1.5rem 2.125rem;
+            background-color: rgba(229, 229, 229, 1);
+            box-shadow: 5px 5px 20px rgba(51, 51, 51, 0.25);
+            border-radius: 0 0.25rem 0.25rem 0;
+
+            div.info {
+                display: grid;
+                grid-template-rows: auto 1fr;
+                gap: 1.5rem;
+                height: 90%;
+
+                div.title-and-date {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: baseline;
+                    gap: 0.5rem 1rem;
+                    flex-wrap: wrap;
+    
+                    .title {
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                    }
+                    
+                    .date {
+                        color: rgb(130, 130, 130);
+                        font-size: 0.625rem;
+                    }
+                }
+                
+                div.container-description {
+                    display: grid;
+                    grid-template-rows: auto 1fr;
+                    gap: 0.25rem;
+                    overflow-y: auto;
+                    // height: 14vw;
+
+                    div.title-description {
+                        font-size: 0.875rem;
+                    }
+
+                    div.description {
+                        font-size: 0.75rem;
+                        color: rgb(130, 130, 130);
+                    }
+                }
+            }
+     
+
+            div.statistics {
+                display: flex;
+                justify-content: center;
+                gap: 1rem;
+                flex-wrap: wrap;
+                font-size: 0.625rem;
+    
+                > div {
+                    display: flex;
+                    gap: 0.125rem;
+                }
+            }
+        }
+
+        &.red {
+            $base-color: #eb5757;
+            box-shadow: 5px 10px 10px transparentize($base-color, 0.75);
+            button.go-back {
+                background-color: $base-color;
+            }
+            
+            div.info-and-statistics {
+                border-bottom: solid 5px $base-color;
+            }
+        }
+
+        &.yellow {
+            $base-color: #F2C94C;
+            box-shadow: 5px 10px 10px transparentize($base-color, 0.75);
+            button.go-back {
+                background-color: $base-color;
+            }
+            
+            div.info-and-statistics {
+                border-bottom: solid 5px $base-color;
+            }
+        }
+
+        &.blue {
+            $base-color: #2F80ED;
+            box-shadow: 5px 10px 10px transparentize($base-color, 0.75);
+            button.go-back {
+                background-color: $base-color;
+            }
+            
+            div.info-and-statistics {
+                border-bottom: solid 5px $base-color;
+            }
+        }
+
+        &.green {
+            $base-color: #27AE60;
+            box-shadow: 5px 10px 10px transparentize($base-color, 0.75);
+            button.go-back {
+                background-color: $base-color;
+            }
+            
+            div.info-and-statistics {
+                border-bottom: solid 5px $base-color;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    main {
+        margin: 2rem 10vw;
+        div.container-video {
+            flex-direction: column;
+            height: auto;
+            img.thumbnail {
+                width: 100%;
+            }
+    
+            div.info-and-statistics {
+                width: auto;
+            }
+        }
+    }
+}

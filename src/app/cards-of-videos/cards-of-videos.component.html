@@ -1,7 +1,12 @@
 <div class="container-videos">
     <div class="videos">
-        <div *ngFor="let video of videos$.getValue()">
-            <card-of-video [video]="video"></card-of-video>
+        <div *ngFor="let video of videos | paginate:{itemsPerPage: tableSize, currentPage: page, totalItems: count}; let i index">
+            <app-card-of-video [video]="video"></app-card-of-video>
         </div>
+    </div>
+    <div class="pagination">
+        <pagination-controls previousLabel="Prev" nextLabel="Next" 
+        (pageChange)="onTableDataChange($event)" (click)="scrollToTop()" [hidden]="count < tableSize">
+        </pagination-controls>
     </div>
 </div>

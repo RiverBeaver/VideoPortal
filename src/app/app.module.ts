@@ -1,33 +1,34 @@
 import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { CardsOfVideosModule } from './cards-of-videos/cards-of-videos.module';
-import { VideosService } from './entities/services/videos.service';
 import { StoreModule } from '@ngrx/store';
-import { reducers, metaReducers } from './reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { EffectsModule } from '@ngrx/effects';
-import { AppEffects } from './app.effects';
-import { HeaderModule } from './header/header.module';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { reducers, metaReducers } from './entities/store/index';
+import AppRoutingModule from './app-routing.module';
+import AppComponent from './app.component';
+import CardsOfVideosModule from './cards-of-videos/cards-of-videos.module';
+import VideosService from './entities/services/videos.service';
+import HeaderModule from './header/header.module';
+import MoreAboutVideoModule from './more-about-video/more-about-video.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
+    NgxPaginationModule,
     BrowserModule,
     AppRoutingModule,
     CardsOfVideosModule,
     HeaderModule,
+    MoreAboutVideoModule,
     StoreModule.forRoot(reducers, {
-      metaReducers
+      metaReducers,
     }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-    EffectsModule.forRoot([AppEffects])
   ],
   providers: [VideosService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export default class AppModule {}

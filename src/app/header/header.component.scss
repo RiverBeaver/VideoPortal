@@ -1,15 +1,31 @@
 header {
     display: flex;
     justify-content: center;
+    background-color: #e5e5e5;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 
     .container-header {
         display: grid;
-        gap: 1.5rem;
+        gap: 1.25rem;
 
         .logo-and-form {
             display: flex;
             gap: 0.625rem;
             align-items: center;
+
+            button.logo {
+                background-color: transparent;
+                box-shadow: none;
+                cursor: pointer;
+                padding: 0;
+
+                img {
+                    vertical-align: middle;
+                }
+            }
+
     
             .form-and-settings-button {
                 display: flex;
@@ -23,6 +39,13 @@ header {
                         background-color: rgb(239, 239, 239);
                         width: 24.75rem;
                         padding-left: 0.375rem;
+
+                        @media (max-width: 650px) {
+                            & {
+                                width: 45vw;
+                                min-width: 12rem;
+                            }
+                        }
                     }
             
                     button {

@@ -2,12 +2,15 @@
     <div class="title">Sorting by:</div>
     <div class="sorts">
         <div>
-            <input type="radio" id="date" name="sort" value="date">
+            <input type="radio" id="date" name="sort" value="date" (change)="changeSort($event)">
             <label for="date">date</label>
         </div>
         <div>
-            <input type="radio" id="count-of-views" name="sort" value="count-of-views">
+            <input type="radio" id="count-of-views" name="sort" value="count-of-views" (change)="changeSort($event)">
             <label for="count-of-views">count of views</label>
         </div>
+        <button class="sorting-order" (click)="changeSortingOrder()">
+            <img src="assets/img/sorting.png" alt="" [ngClass]="{'ascending': sortingOrder - 1}">
+        </button>
     </div>
 </div>

@@ -11,6 +11,7 @@ div.container-settings {
     div.sorts {
         display: flex;
         gap: 1.25rem;
+        align-items: center;
 
         input {
             display: none;
@@ -23,6 +24,25 @@ div.container-settings {
             color: rgba(47, 128, 237, 1);
             cursor: pointer;
         }
+
+        .sorting-order {
+            cursor: pointer;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 0;
+
+            img {
+                transition: all 0.1s ease-in-out;
+                width: 1.75rem;
+
+                &.ascending {
+                    transform: scale(1, -1);
+                }
+            }
+
+        }
+
+
     }
 
 }

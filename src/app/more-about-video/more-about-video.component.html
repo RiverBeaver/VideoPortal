@@ -1,0 +1,39 @@
+<main *ngIf="video; else error">
+    <div class="container-video" [ngClass]="classColor">
+        <button class="go-back" (click)="goToMainPage()"> <img src="assets/img/go-back.svg" alt=""></button>
+        <img src="{{video.thumbnail}}" alt="" class="thumbnail">
+        <div class="info-and-statistics">
+            <div class="info">
+                <div class="title-and-date">
+                    <div class="title">{{video.titel}}</div>
+                    <div class="date">{{video.publishedAt | date: 'EEEE, MMMM d, yyyy'}}</div>
+                </div>
+                <div class="container-description">
+                    <div class="title-description">Description:</div>
+                    <div class="description">{{video.description}}</div>
+                </div>
+            </div>
+            <div class="statistics">
+                <div>
+                    <img src="assets/img/viewed.svg" alt="">
+                    <div>{{video.statistics.viewCount}}</div>
+                </div>
+                <div>
+                    <img src="assets/img/liked.svg" alt="">
+                    <div>{{video.statistics.likeCount}}</div>
+                </div>
+                <div>
+                    <img src="assets/img/dislike.svg" alt="">
+                    <div>{{video.statistics.dislikeCount}}</div>
+                </div>
+                <div>
+                    <img src="assets/img/comment.svg" alt="">
+                    <div>{{video.statistics.commentCount}}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<ng-template #error>
+    <app-error></app-error>
+</ng-template>
