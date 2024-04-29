@@ -24,3 +24,16 @@ button {
         box-shadow: none;
     }
 }
+
+::-webkit-scrollbar {
+    width: 0.25em;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    border-radius: 3px;
+  }

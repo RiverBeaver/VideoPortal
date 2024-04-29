@@ -81,9 +81,10 @@ main {
                         font-size: 0.875rem;
                     }
 
-                    div.description {
+                    .description {
                         font-size: 0.75rem;
                         color: rgb(130, 130, 130);
+                        white-space: pre-wrap;
                     }
                 }
             }
@@ -165,6 +166,10 @@ main {
     
             div.info-and-statistics {
                 width: auto;
+
+                div.info div.container-description .description {
+                    height: 20rem;
+                }
             }
         }
     }
